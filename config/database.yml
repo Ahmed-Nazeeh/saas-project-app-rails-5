@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: saas_DB__test
+  database: saas_DB_test
   username: <%= Rails.application.credentials.dig( :postgres, :username) %>
   password: <%= Rails.application.credentials.dig( :postgres, :password) %>
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  # database: saas_DB_production
-  # username: ahmed
-  # password: <%= ENV['SAAS-PROJECT-APP-RAILS-5_DATABASE_PASSWORD'] %>
+  database: saas_DB_production
+  username: ahmed
+  password: <%= ENV['SAAS-PROJECT-APP-RAILS-5_DATABASE_PASSWORD'] %>
